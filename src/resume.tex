@@ -1,0 +1,175 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Import necessary packages for formatting and layout
+\usepackage{latexsym} % For symbols
+\usepackage[empty]{fullpage} % For full-page layout without headers/footers
+\usepackage{titlesec} % For customizing section titles
+\usepackage{marvosym} % For additional symbols
+\usepackage[usenames,dvipsnames]{color} % For color customization
+\usepackage{verbatim} % For block comments
+\usepackage{enumitem} % For list customization
+\usepackage[pdftex]{hyperref} % For clickable hyperlinks
+\usepackage{fancyhdr} % For custom headers and footers
+
+% Configure header and footer
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{} % Remove footer content
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+\renewcommand{\footrulewidth}{0pt} % Remove footer line
+
+% Adjust margins for a compact layout
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Set URL style to match text
+\urlstyle{same}
+
+% Configure text alignment and spacing
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Customizing section titles
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands for resume structure
+% Item formatting for individual bullet points
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Subheading formatting for roles/positions
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Nested items under subheadings
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% Configure list symbols and spacing
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+% Header with name, email, and contact information
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\href{https://mahiworld.github.io/}{\Large Mahendra}} & 
+Email : \href{mailto:mahiworld4@gmail.com}{mahiworld4@gmail.com}\\
+{Software Engineer} &  Mobile No. : +91 - 9785686466 \\
+\end{tabular*}
+
+%-----------PROFILE-----------------
+% Brief professional summary
+\section{Profile}
+ {Software developer adept in Golang and Python backend development, with expertise in DevOps. Skilled at integrating development and operations to streamline workflows and enhance efficiency. Passionate about leveraging new technologies to drive innovation and achieve organizational objectives.}
+
+%-----------EDUCATION-----------------
+% Academic qualifications
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology (NIT), Srinagar}{Srinagar, India}
+      {Bachelor of Technology in Computer Science and Engineering;  CGPA: 7.59} {2014 -- 2018}
+  \resumeSubHeadingListEnd
+  
+%-----------EXPERIENCE-----------------
+% Work experience details
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    % Role 1
+    \resumeSubheading
+      {Epek Software Solutions}{India}
+      {Software Developer}{March 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{QuickBooks API Integration}
+        {Developed an accounting system for invoice generation, commission management, and financial transaction handling, cutting processing time by 30\%.}
+        \resumeItem{Data Syncer}
+        {Developed a robust FTP sync solution, automating database updates and reducing manual processing by 40\%.}
+        \resumeItem{Reporting}
+        {Integrated Google Analytics to retrieve metrics like user sessions, session times, traffic sources, platform devices, and page tracking for real-time analytics.}
+        \resumeItem{DevOps}
+        {Streamlined DevOps pipeline with DigitalOcean, Docker, Kubernetes, GitHub Actions, and Lens, ensuring scalable infrastructure and automated code deployment.}
+        \resumeItem{Data Integration Service}
+        {Built automated data processing from Elasticsearch, improving efficiency by 35\% and ensuring real-time event tracking.}
+        \resumeItem{AutoTradeX Platform}
+        {Led back-end overhaul of AutoTradeX, enabling universal dealer integration for seamless operations. Enhanced performance and scalability for streamlined buying, selling, and servicing.}
+        \resumeItem{Notifications}
+        {Developed a service for sending emails using SendGrid APIs and Firebase for in-app and push notifications.}
+        \resumeItem{AgileFlow}
+        {Developed Golang APIs for task management, reducing project completion time by 25\%.}
+      \resumeItemListEnd
+
+    % Role 2
+    \resumeSubheading
+      {Parcelini}{India}
+      {Software Engineer}{Feb 2021 - Feb 2022}
+      \resumeItemListStart
+        \resumeItem{Data Cleanser}
+        {Implemented Python scripts to process CSV files, removing duplicate entries and standardizing address fields using usaddress-scourgify.}
+        \resumeItem{Raw Data Processor}
+        {Created a web application for raw data processing using Flask, enhancing data management capabilities.}
+      \resumeItemListEnd
+
+    % Role 3
+    \resumeSubheading
+      {Indian Institute of Science, Bangalore}{Bangalore, India}
+      {Research Intern}{Nov 2016 - Jan 2017}
+      \resumeItemListStart
+        \resumeItem{Pan-Sharpening using DT-CWT}
+        {Enhanced satellite imagery quality using Java and data fusion techniques, resulting in reduced color distortion and improved resolution scalability.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+% Highlighted projects
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Automated Demo Scheduling}
+      {Built an automated demo scheduling system using HubSpot API, streamlining lead capturing, demo bookings, and follow-up reminders. Improved client engagement and reduced manual intervention by 40\%.}
+    \resumeSubItem{Sorting Visualizer}
+      {Developed a user-friendly web platform using HTML, CSS, Bootstrap, and JavaScript to visually demonstrate sorting algorithms.}
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+% Technical skills
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C, Golang, Python}
+     \hfill
+     \textbf{Libraries/Frameworks}{: Fiber, Gin, Go-chi, Flask, Django}
+   }
+  \item{
+     \textbf{Databases}{: MongoDB, PostgreSQL}
+     \hfill
+     \textbf{DevOps Tools}{: Docker, Kubernetes, GitHub Actions, Lens}
+   }
+  \item{
+     \textbf{Tools/Platforms}{: Git, VS Code, DigitalOcean, Swagger, Redis, Postman, RabbitMQ, Redis, QuickBooks, Google Analytics, HubSpot}
+   }
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

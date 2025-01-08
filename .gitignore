@@ -1,0 +1,13 @@
+*.vscode
+# Ignore LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.latexmk
+
+# Ignore backup files
+*~
